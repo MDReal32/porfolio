@@ -142,6 +142,21 @@ export const portfolio: Portfolio = {
         { type: "npm", label: "NPM", href: "https://npm.im/@mdreal/nestjs-tg-bot" }
       ],
       status: "completed"
+    },
+    {
+      name: "Swiftserve",
+      tagline: "An Express-Like fast web server built on top of Bun",
+      highlights: [
+        "Implemented routing, middleware, and request/response handling similar to Express.js.",
+        "Optimized for performance using Bun's high-speed JavaScript engine.",
+        "Designed a modular architecture for easy extension and customization."
+      ],
+      stack: ["TypeScript", "Bun", "Web Servers"],
+      links: [
+        { type: "github", label: "GitHub", href: "https://github.com/MDReal32/swiftserve" },
+        { type: "npm", label: "NPM", href: "https://npm.im/swiftserve" }
+      ],
+      status: "completed"
     }
   ]
 };
