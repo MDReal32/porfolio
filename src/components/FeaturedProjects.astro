@@ -1,0 +1,77 @@
+---
+import { portfolio } from "../data/portfolio";
+
+const projects = (portfolio.projects ?? []).filter((p) => p.featured);
+---
+
+<section id="featured-projects" class="px-6 pb-16 pt-8">
+  <div class="mx-auto max-w-2xl space-y-14">
+    <!-- Section header -->
+    <header class="space-y-2">
+      <h2 class="text-xs uppercase tracking-widest text-base-content/50">
+        Featured Projects
+      </h2>
+      <p class="text-sm text-base-content/70 max-w-prose">
+        Selected work that reflects how I design systems, architecture, and developer experience.
+      </p>
+    </header>
+
+    <!-- Projects -->
+    <div class="space-y-16">
+      {projects.map((project) => (
+        <article class="space-y-4">
+          <!-- Project name -->
+          <h3 class="text-2xl font-semibold tracking-tight text-base-content">
+            {project.name}
+          </h3>
+
+          <!-- Tagline -->
+          <p class="leading-7 text-base-content/80 max-w-prose">
+            {project.tagline}
+          </p>
+
+          <!-- Highlights -->
+          {project.highlights?.length ? (
+            <ul class="space-y-1 text-sm leading-6 text-base-content/70">
+              {project.highlights.slice(0, 3).map((h) => (
+                <li class="flex gap-2">
+                  <span class="mt-[6px] h-1 w-1 rounded-full bg-base-content/40"></span>
+                  <span>{h}</span>
+                </li>
+              ))}
+            </ul>
+          ) : null}
+
+          <!-- Stack -->
+          {project.stack?.length ? (
+            <p class="text-sm text-base-content/60">
+              <span class="uppercase tracking-wide text-xs text-base-content/50">
+                Stack
+              </span>
+              <span class="ml-2">{project.stack.join(" · ")}</span>
+            </p>
+          ) : null}
+
+          <!-- Links -->
+          {project.links?.length ? (
+            <div class="flex gap-5 pt-1 text-sm">
+              {project.links.map((link) => (
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  class="text-primary hover:underline"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          ) : null}
+        </article>
+      ))}
+    </div>
+
+    <!-- Section divider -->
+    <div class="pt-6 border-t border-base-300/60"></div>
+  </div>
+</section>

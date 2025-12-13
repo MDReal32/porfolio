@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes:
+    emerald --default,
+    dim --prefersdark;
+}
+
+@media print {
+  :root {
+    color-scheme: light;
+  }
+
+  html,
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  * {
+    color: #000 !important;
+    opacity: 1 !important;
+  }
+
+  a {
+    text-decoration: none !important;
+  }
+}

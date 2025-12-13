@@ -1,0 +1,38 @@
+---
+import { portfolio } from "../data/portfolio";
+const { basics } = portfolio;
+---
+
+<nav class="px-6 py-5 print:hidden">
+  <div class="mx-auto flex max-w-2xl items-center justify-between">
+    <!-- Brand -->
+    <a href="/" class="text-base-content/90 hover:text-base-content text-sm font-semibold tracking-tight transition">
+      {basics.fullName}
+    </a>
+
+    <!-- Actions -->
+    <div class="flex items-center gap-5 text-sm">
+      <a href="/resume" class="text-base-content/60 hover:text-base-content transition"> Resume </a>
+
+      {
+        basics.links?.linkedin && (
+          <a
+            href={basics.links.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            class="text-base-content/60 hover:text-base-content transition"
+          >
+            LinkedIn
+          </a>
+        )
+      }
+
+      <a
+        href={`mailto:${basics.email}`}
+        class="bg-primary text-primary-content rounded-md px-3 py-1.5 text-sm font-medium transition hover:opacity-90"
+      >
+        Email
+      </a>
+    </div>
+  </div>
+</nav>
