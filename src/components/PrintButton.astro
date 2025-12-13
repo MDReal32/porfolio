@@ -1,0 +1,11 @@
+---
+interface Props {
+  label?: string;
+}
+
+const { label = "Print / Save PDF" } = Astro.props;
+---
+
+<button type="button" class="btn btn-sm btn-outline print:hidden" onclick="window.print()">
+  {label}
+</button>
