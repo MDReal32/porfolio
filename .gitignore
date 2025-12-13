@@ -209,4 +209,4 @@ dist
 .pnp.*
 
 .astro/
-dist/
+build/

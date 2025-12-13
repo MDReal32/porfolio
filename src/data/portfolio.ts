@@ -1,4 +1,4 @@
-import type { Portfolio } from "../types/portfolio";
+import type { Portfolio } from "../types/portfolio/portfolio";
 
 export const portfolio: Portfolio = {
   basics: {
@@ -122,9 +122,10 @@ export const portfolio: Portfolio = {
       stack: ["TypeScript", "Node.js", "Vite", "SSR"],
       featured: true,
       links: [
-        { label: "GitHub", href: "https://github.com/Velnora/velnora" }
+        { type: "github", label: "GitHub", href: "https://github.com/Velnora/velnora" }
         // { label: "Docs", href: "..." },
-      ]
+      ],
+      status: "active"
     },
     {
       name: "NestJS Telegram Bot Framework",
@@ -137,9 +138,10 @@ export const portfolio: Portfolio = {
       stack: ["TypeScript", "NestJS", "grammY"],
       featured: true,
       links: [
-        { label: "GitHub", href: "https://github.com/MDReal32/nestjs-tg-bot" },
-        { label: "NPM", href: "https://npm.im/@mdreal/nestjs-tg-bot" }
-      ]
+        { type: "github", label: "GitHub", href: "https://github.com/MDReal32/nestjs-tg-bot" },
+        { type: "npm", label: "NPM", href: "https://npm.im/@mdreal/nestjs-tg-bot" }
+      ],
+      status: "completed"
     }
   ]
 };
