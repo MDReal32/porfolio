@@ -1,4 +1,5 @@
 import type { ProjectLink } from "./project-link";
+import type { ProjectStatus } from "./project-status";
 
 export interface Project {
   name: string;
@@ -9,5 +10,6 @@ export interface Project {
   stack?: string[]; // keep short
 
   links?: ProjectLink[];
+  status: ProjectStatus;
   featured?: boolean; // for homepage ordering
 }

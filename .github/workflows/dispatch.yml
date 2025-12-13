@@ -1,0 +1,45 @@
+name: Dispatch profile README update
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "src/data/**"
+      - "src/bin/**"
+      - "src/generators/**"
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Install
+        run: yarn install --immutable
+
+      - name: Generate README content
+        run: yarn generate:profile
+        # expect output at .generated/profile/README.md
+
+      - name: Read generated content
+        id: readme
+        run: |
+          echo "content<<EOF" >> $GITHUB_OUTPUT
+          cat .generated/profile/README.md >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Dispatch to profile repo
+        uses: peter-evans/repository-dispatch@v4
+        with:
+          token: ${{ secrets.PROFILE_REPO_TOKEN }}
+          repository: MDReal32/MDReal32
+          event-type: profile-readme-update
+          client-payload: >
+            {"readme": ${{ toJson(steps.readme.outputs.content) }}}
