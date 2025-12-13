@@ -210,3 +210,4 @@ dist
 
 .astro/
 build/
+.generated
