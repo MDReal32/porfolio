@@ -1,43 +1,132 @@
-# Astro Starter Kit: Minimal
+# Portfolio
 
-```sh
-yarn create astro@latest -- --template minimal
+Personal portfolio and resume website built with **Astro**, **Tailwind CSS**, and **DaisyUI**.
+
+The site is intentionally minimal and content-first:
+
+* a small homepage for first impression
+* a print-ready resume page
+* fast, SEO-friendly, and easy to maintain
+
+---
+
+## Features
+
+* **Astro (MPA)** — fast, static, SEO-friendly
+* **View Transitions** — SPA-like navigation without a client router
+* **Tailwind CSS + DaisyUI** — consistent, themeable styling
+* **Single source of truth** for content (`portfolio.ts`)
+* **Print-optimized resume** (browser → Save as PDF)
+* **GitHub Pages deployment** via GitHub Actions
+* No images, no heavy JS, no unnecessary hydration
+
+---
+
+## Pages
+
+* `/` — Homepage (hero + featured projects)
+* `/resume` — Full resume (screen + print/PDF friendly)
+
+---
+
+## Tech Stack
+
+* **Astro**
+* **TypeScript**
+* **Tailwind CSS**
+* **DaisyUI**
+* **Yarn v4 (Berry)**
+* **GitHub Actions** (Pages deployment)
+
+---
+
+## Project Structure
+
+```txt
+src/
+  components/        # UI components (Nav, Hero, FeaturedProjects)
+  layouts/           # Layout wrapper
+  pages/             # Routes (/ and /resume)
+  data/              # Portfolio data (single source of truth)
+  utils/             # Small helpers (date formatting, etc.)
+  styles/
+    global.css       # Global + print styles
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+---
 
-## 🚀 Project Structure
+## Content Management
 
-Inside of your Astro project, you'll see the following folders and files:
+All content lives in one place:
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```txt
+src/data/portfolio.ts
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+This includes:
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+* personal info
+* summary
+* experience
+* projects
+* skills
+* education
+* languages
 
-Any static assets, like images, can be placed in the `public/` directory.
+No content is hardcoded in components.
 
-## 🧞 Commands
+---
 
-All commands are run from the root of the project, from a terminal:
+## Development
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `yarn install`             | Installs dependencies                            |
-| `yarn dev`             | Starts local dev server at `localhost:4321`      |
-| `yarn build`           | Build your production site to `./dist/`          |
-| `yarn preview`         | Preview your build locally, before deploying     |
-| `yarn astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `yarn astro -- --help` | Get help using the Astro CLI                     |
+```bash
+yarn install
+yarn dev
+```
 
-## 👀 Want to learn more?
+---
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Build
+
+```bash
+yarn astro build
+```
+
+Output is generated in `dist/`.
+
+---
+
+## Print / PDF Resume
+
+* Open `/resume`
+* Use browser **Print → Save as PDF**
+* Print styles ensure clean black-on-white output
+
+---
+
+## Deployment (GitHub Pages)
+
+Deployment is handled via **GitHub Actions**.
+
+Workflow:
+
+* build Astro site
+* upload Pages artifact
+* deploy to GitHub Pages
+
+No manual steps required after initial setup.
+
+---
+
+## Design Philosophy
+
+* Content over visuals
+* Minimal UI, clear hierarchy
+* No unnecessary animations or JS
+* Easy to extend without refactoring
+
+---
+
+## License
+
+MIT
