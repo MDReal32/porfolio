@@ -2,7 +2,12 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [master]
+    branches:
+      - master
+    paths:
+      - public/**
+      - src/**
+      - astro.config.mjs
   workflow_dispatch:
 
 permissions:

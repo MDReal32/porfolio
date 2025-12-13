@@ -2,11 +2,12 @@ name: Dispatch profile README update
 
 on:
   push:
-    branches: [master]
+    branches:
+      - master
     paths:
-      - "src/data/**"
-      - "src/bin/**"
-      - "src/generators/**"
+      - src/data/**
+      - src/bin/**
+      - src/generators/**
 
 jobs:
   dispatch:
