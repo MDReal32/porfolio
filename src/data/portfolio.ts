@@ -4,7 +4,7 @@ export const portfolio: Portfolio = {
   basics: {
     fullName: "Veyis Aliyev",
     preferredName: "MDReal",
-    title: "Senior Frontend Developer",
+    title: "Software Engineer (Frontend, APIs, Developer Tooling)",
     location: "Baku, Azerbaijan",
     email: "mdrealiyev00@gmail.com",
     phone: "+994103311969",
@@ -14,8 +14,8 @@ export const portfolio: Portfolio = {
   },
   summary: {
     lines: [
-      "Senior Frontend Developer focused on scalable UI architecture, SSR/SSG, and performance-critical applications.",
-      "Experienced across Node.js backend, infrastructure, and developer tooling with a strong systems mindset."
+      "Software engineer focused on scalable UI architecture, API integration, and developer tooling.",
+      "Builds type-safe systems in TypeScript across frontend and Node.js, with a strong focus on DX and maintainability."
     ]
   },
   experience: [
@@ -26,9 +26,10 @@ export const portfolio: Portfolio = {
       start: "2022-07",
       end: "Present",
       highlights: [
-        "Developed high-performance React applications for large-scale government projects",
-        "Improved UI responsiveness and user interaction performance",
-        "Applied TypeScript patterns to improve maintainability and reduce bugs"
+        "Built large React applications for government e-services with a focus on stability and performance",
+        "Standardized UI patterns and shared modules to keep projects consistent across teams",
+        "Improved API integration reliability by aligning frontend contracts with backend teams",
+        "Used TypeScript patterns to reduce bugs and keep code easy to change"
       ]
     },
     {
@@ -38,10 +39,10 @@ export const portfolio: Portfolio = {
       start: "2021-11",
       end: "2022-12",
       highlights: [
-        "Built real-time systems using Node.js and WebSockets",
-        "Implemented SSR/SSG with Next.js to improve SEO and load times",
-        "Managed Kubernetes-based microservices infrastructure",
-        "Automated deployments and configuration using Ansible"
+        "Built real-time features using Node.js and WebSockets",
+        "Implemented SSR/SSG with Next.js to improve load time and SEO",
+        "Operated microservices infrastructure on Kubernetes and Docker",
+        "Automated deployments and configuration using Ansible and CI/CD pipelines"
       ]
     },
     {
@@ -51,10 +52,10 @@ export const portfolio: Portfolio = {
       start: "2021-10",
       end: "2022-03",
       highlights: [
-        "Designed modular backend systems using NestJS",
-        "Built React-based frontend applications",
-        "Integrated AWS S3 and Google Maps APIs",
-        "Worked with relational databases via TypeORM"
+        "Designed modular backend services with NestJS and clear API boundaries",
+        "Built React features that consumed APIs through shared client patterns",
+        "Integrated AWS S3 and Google Maps in product flows",
+        "Worked with relational databases using TypeORM"
       ]
     },
     {
@@ -64,9 +65,9 @@ export const portfolio: Portfolio = {
       start: "2019-09",
       end: "2021-10",
       highlights: [
-        "Developed automated decision systems using Python and Django",
-        "Containerized services with Docker",
-        "Worked with Kubernetes and CI/CD pipelines"
+        "Built decision and scoring services using Python and Django",
+        "Containerized services with Docker for consistent environments",
+        "Worked with Kubernetes and CI/CD to improve delivery flow"
       ]
     },
     {
@@ -76,9 +77,9 @@ export const portfolio: Portfolio = {
       start: "2018-08",
       end: "2019-09",
       highlights: [
-        "Developed internal React applications",
-        "Worked with Redux and Saga for state management",
-        "Built responsive UIs using TailwindCSS and Bootstrap"
+        "Built internal React apps for day-to-day business workflows",
+        "Used Redux and Saga for state management in complex screens",
+        "Created responsive UI with TailwindCSS and Bootstrap"
       ]
     }
   ],
@@ -102,8 +103,8 @@ export const portfolio: Portfolio = {
   ],
   skills: {
     primary: ["React", "TypeScript", "Node.js", "SSR / SSG"],
-    secondary: ["Vue.js (2/3)", "NestJS", "REST APIs", "WebSockets"],
-    tooling: ["Docker", "Kubernetes", "Ansible", "Git", "CI/CD"]
+    secondary: ["Vue.js (2/3)", "NestJS", "REST APIs", "WebSockets", "GraphQL"],
+    tooling: ["Docker", "Kubernetes", "Ansible", "Git", "CI/CD", "Code generation", "CLI tooling"]
   },
   languages: [
     { name: "Azerbaijani", level: "Native" },
@@ -116,8 +117,8 @@ export const portfolio: Portfolio = {
       tagline: "A modular web framework focused on SSR, plugins, and developer tooling.",
       highlights: [
         "Designed a plugin-based architecture for integrating different app types (CSR/SSR/RSC-ready direction).",
-        "Built a custom SSR pipeline with emphasis on correctness, performance, and DX.",
-        "Focused on scalable routing + runtime integration patterns (framework-level design)."
+        "Built an SSR pipeline with clear boundaries, strong typing, and focus on DX.",
+        "Worked on routing and runtime integration patterns with a focus on long-term maintainability."
       ],
       stack: ["TypeScript", "Node.js", "Vite", "SSR"],
       featured: true,
@@ -132,8 +133,8 @@ export const portfolio: Portfolio = {
       tagline: "A reusable NestJS module for grammY bots with clean DI and multi-bot support.",
       highlights: [
         "Built dynamic module registration patterns (forRoot/forRootAsync) for flexible configuration.",
-        "Designed decorator-based handlers and routing/explorer patterns for clean bot commands.",
-        "Structured for multi-bot scenarios using tokens/registry patterns and strong typing."
+        "Designed decorator-based handlers and routing/explorer patterns for clear bot commands.",
+        "Supported multi-bot setups using tokens and a registry approach with strong typing."
       ],
       stack: ["TypeScript", "NestJS", "grammY"],
       featured: true,
@@ -145,11 +146,11 @@ export const portfolio: Portfolio = {
     },
     {
       name: "Swiftserve",
-      tagline: "An Express-Like fast web server built on top of Bun",
+      tagline: "An Express-like fast web server built on top of Bun",
       highlights: [
         "Implemented routing, middleware, and request/response handling similar to Express.js.",
-        "Optimized for performance using Bun's high-speed JavaScript engine.",
-        "Designed a modular architecture for easy extension and customization."
+        "Focused on fast startup and low overhead on Bun runtime.",
+        "Designed a modular structure so features can be added without touching the core."
       ],
       stack: ["TypeScript", "Bun", "Web Servers"],
       links: [
