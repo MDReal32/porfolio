@@ -9,13 +9,15 @@ export const portfolio: Portfolio = {
     email: "mdrealiyev00@gmail.com",
     phone: "+994103311969",
     links: {
-      linkedin: "https://www.linkedin.com/in/mdrealiyev/"
+      linkedin: "https://www.linkedin.com/in/mdrealiyev",
+      github: "https://github.com/MDReal32",
+      website: "https://mdreal.org",
+      blog: "https://velnora.notion.site"
     }
   },
   summary: {
     lines: [
-      "Senior Frontend Developer focused on scalable UI architecture, SSR/SSG, and performance-critical applications.",
-      "Experienced across Node.js backend, infrastructure, and developer tooling with a strong systems mindset."
+      "Fullstack software engineer with experience in developer tooling and API integration. Focus on SDK-style client design, shared patterns, and modular systems that reduce setup time and keep projects consistent. Worked with authentication, pagination, error handling, and versioned services. Care about clear contracts, stable architecture, and simple onboarding."
     ]
   },
   experience: [
@@ -26,59 +28,37 @@ export const portfolio: Portfolio = {
       start: "2022-07",
       end: "Present",
       highlights: [
-        "Developed high-performance React applications for large-scale government projects",
-        "Improved UI responsiveness and user interaction performance",
-        "Applied TypeScript patterns to improve maintainability and reduce bugs"
-      ]
-    },
-    {
-      company: "DevOps / Backend NodeJS",
-      role: "Middle Backend & DevOps Developer",
-      location: "Istanbul, Türkiye",
-      start: "2021-11",
-      end: "2022-12",
-      highlights: [
-        "Built real-time systems using Node.js and WebSockets",
-        "Implemented SSR/SSG with Next.js to improve SEO and load times",
-        "Managed Kubernetes-based microservices infrastructure",
-        "Automated deployments and configuration using Ansible"
+        "Built large React applications for government e-services with a focus on stability and performance. Standardized UI patterns and shared modules to keep projects consistent. Worked with backend teams to align API contracts and fix integration issues. Used TypeScript to reduce runtime errors and improve maintainability."
       ]
     },
     {
       company: "MVP Engine (jetbase.io)",
-      role: "Middle Fullstack Developer",
+      role: "Senior Fullstack developer",
       location: "Krakiv, Ukraine",
       start: "2021-10",
       end: "2022-03",
       highlights: [
-        "Designed modular backend systems using NestJS",
-        "Built React-based frontend applications",
-        "Integrated AWS S3 and Google Maps APIs",
-        "Worked with relational databases via TypeORM"
+        "Designed modular services with NestJS and clear API boundaries. Built React features that consumed APIs through shared client patterns. Integrated AWS S3 and Google Maps. Worked with relational data using TypeORM."
       ]
     },
     {
       company: "Crinfotask LLC",
-      role: "Junior Software Developer",
+      role: "Fullstack Developer (SDK-weighted)",
       location: "Baku, Azerbaijan",
       start: "2019-09",
       end: "2021-10",
       highlights: [
-        "Developed automated decision systems using Python and Django",
-        "Containerized services with Docker",
-        "Worked with Kubernetes and CI/CD pipelines"
+        "Developed service-oriented applications with Python and Django. Defined clear API contracts and built reusable SDK-style client patterns for data access. Standardized request and response handling to keep integrations consistent. Used containerized environments and CI/CD pipelines to support repeatable builds and deployments."
       ]
     },
     {
       company: "Kibrit MMC",
-      role: "Junior Frontend Developer",
+      role: "Frontend Developer",
       location: "Baku, Azerbaijan",
       start: "2018-08",
       end: "2019-09",
       highlights: [
-        "Developed internal React applications",
-        "Worked with Redux and Saga for state management",
-        "Built responsive UIs using TailwindCSS and Bootstrap"
+        "Built internal web applications using React and shared UI components. Consumed REST APIs through structured data flows. Used Redux and Saga to keep state handling predictable. Created responsive layouts and followed a consistent project structure."
       ]
     }
   ],
@@ -101,9 +81,9 @@ export const portfolio: Portfolio = {
     }
   ],
   skills: {
-    primary: ["React", "TypeScript", "Node.js", "SSR / SSG"],
-    secondary: ["Vue.js (2/3)", "NestJS", "REST APIs", "WebSockets"],
-    tooling: ["Docker", "Kubernetes", "Ansible", "Git", "CI/CD"]
+    primary: ["TypeScript", "Node.js", "React", "API integration"],
+    secondary: ["NestJS", "REST APIs", "GraphQL", "WebSockets", "SSR / SSG", "Vue.js (2/3)"],
+    tooling: ["CLI tooling", "Code generation", "Docker", "Kubernetes", "Git", "CI/CD", "Ansible"]
   },
   languages: [
     { name: "Azerbaijani", level: "Native" },

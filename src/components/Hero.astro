@@ -22,13 +22,13 @@ const { basics, summary } = portfolio;
 
     <!-- Summary -->
     {
-      summary?.lines?.length ? (
+      summary?.lines?.length && (
         <div class="mt-7 space-y-2">
           {summary.lines.map(line => (
             <p class="text-[15px] leading-7 opacity-85">{line}</p>
           ))}
         </div>
-      ) : null
+      )
     }
 
     <!-- Divider (anchors the hero so it doesn't feel "floating") -->

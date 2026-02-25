@@ -48,6 +48,22 @@ const { basics, summary, experience, projects, skills, education, languages } = 
             </a>
           )
         }
+
+        {
+          basics.links?.website && (
+            <a href={basics.links.website} target="_blank" rel="noreferrer" class="hover:text-base-content transition">
+              Website
+            </a>
+          )
+        }
+
+        {
+          basics.links?.blog && (
+            <a href={basics.links.blog} target="_blank" rel="noreferrer" class="hover:text-base-content transition">
+              Blog
+            </a>
+          )
+        }
       </div>
 
       <!-- Divider -->
