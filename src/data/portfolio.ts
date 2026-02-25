@@ -4,7 +4,7 @@ export const portfolio: Portfolio = {
   basics: {
     fullName: "Veyis Aliyev",
     preferredName: "MDReal",
-    title: "Senior Frontend Developer",
+    title: "Software Engineer (Fullstack, APIs, Developer Tooling)",
     location: "Baku, Azerbaijan",
     email: "mdrealiyev00@gmail.com",
     phone: "+994103311969",
@@ -93,16 +93,17 @@ export const portfolio: Portfolio = {
   projects: [
     {
       name: "Velnora",
-      tagline: "A modular web framework focused on SSR, plugins, and developer tooling.",
+      tagline: "Modular framework for SSR, routing, runtime plugins, and developer tooling.",
       highlights: [
         "Designed a plugin-based architecture for integrating different app types (CSR/SSR/RSC-ready direction).",
-        "Built a custom SSR pipeline with emphasis on correctness, performance, and DX.",
-        "Focused on scalable routing + runtime integration patterns (framework-level design)."
+        "Built typed API client patterns and shared schemas for consistent service integration.",
+        "Built generators and configuration layers that reduce manual setup and keep projects consistent."
       ],
       stack: ["TypeScript", "Node.js", "Vite", "SSR"],
       featured: true,
       links: [
-        { type: "github", label: "GitHub", href: "https://github.com/Velnora/velnora" }
+        { type: "github", label: "GitHub", href: "https://github.com/Velnora/velnora" },
+        { type: "blog", label: "Blog", href: "https://velnora.notion.site" }
         // { label: "Docs", href: "..." },
       ],
       status: "active"
@@ -112,8 +113,8 @@ export const portfolio: Portfolio = {
       tagline: "A reusable NestJS module for grammY bots with clean DI and multi-bot support.",
       highlights: [
         "Built dynamic module registration patterns (forRoot/forRootAsync) for flexible configuration.",
-        "Designed decorator-based handlers and routing/explorer patterns for clean bot commands.",
-        "Structured for multi-bot scenarios using tokens/registry patterns and strong typing."
+        "Designed decorator-based handlers and routing/explorer patterns for clear bot commands.",
+        "Supported multi-bot setups using tokens and a registry approach with strong typing."
       ],
       stack: ["TypeScript", "NestJS", "grammY"],
       featured: true,
@@ -125,11 +126,11 @@ export const portfolio: Portfolio = {
     },
     {
       name: "Swiftserve",
-      tagline: "An Express-Like fast web server built on top of Bun",
+      tagline: "An Express-like fast web server built on top of Bun",
       highlights: [
         "Implemented routing, middleware, and request/response handling similar to Express.js.",
-        "Optimized for performance using Bun's high-speed JavaScript engine.",
-        "Designed a modular architecture for easy extension and customization."
+        "Focused on fast startup and low overhead on Bun runtime.",
+        "Designed a modular structure so features can be added without touching the core."
       ],
       stack: ["TypeScript", "Bun", "Web Servers"],
       links: [
