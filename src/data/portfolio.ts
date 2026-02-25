@@ -4,7 +4,7 @@ export const portfolio: Portfolio = {
   basics: {
     fullName: "Veyis Aliyev",
     preferredName: "MDReal",
-    title: "Software Engineer (Frontend, APIs, Developer Tooling)",
+    title: "Software Engineer (Fullstack, APIs, Developer Tooling)",
     location: "Baku, Azerbaijan",
     email: "mdrealiyev00@gmail.com",
     phone: "+994103311969",
@@ -14,8 +14,8 @@ export const portfolio: Portfolio = {
   },
   summary: {
     lines: [
-      "Software engineer focused on scalable UI architecture, API integration, and developer tooling.",
-      "Builds type-safe systems in TypeScript across frontend and Node.js, with a strong focus on DX and maintainability."
+      "Fullstack software engineer focused on APIs, integration patterns, and developer tooling.",
+      "Builds type-safe systems in TypeScript across client and server, with a focus on maintainability and clear contracts."
     ]
   },
   experience: [
@@ -28,31 +28,31 @@ export const portfolio: Portfolio = {
       highlights: [
         "Built large React applications for government e-services with a focus on stability and performance",
         "Standardized UI patterns and shared modules to keep projects consistent across teams",
-        "Improved API integration reliability by aligning frontend contracts with backend teams",
-        "Used TypeScript patterns to reduce bugs and keep code easy to change"
+        "Worked with backend teams to align API contracts and reduce integration issues",
+        "Used shared data access patterns to keep API usage consistent across modules"
       ]
     },
     {
-      company: "DevOps / Backend NodeJS",
-      role: "Middle Backend & DevOps Developer",
+      company: "Node.js Platform Work",
+      role: "Fullstack Developer",
       location: "Istanbul, Türkiye",
       start: "2021-11",
       end: "2022-12",
       highlights: [
         "Built real-time features using Node.js and WebSockets",
         "Implemented SSR/SSG with Next.js to improve load time and SEO",
-        "Operated microservices infrastructure on Kubernetes and Docker",
-        "Automated deployments and configuration using Ansible and CI/CD pipelines"
+        "Worked with containerized services and automated deployment flows",
+        "Focused on reliable API integration across client and server"
       ]
     },
     {
       company: "MVP Engine (jetbase.io)",
-      role: "Middle Fullstack Developer",
+      role: "Fullstack Developer",
       location: "Krakiv, Ukraine",
       start: "2021-10",
       end: "2022-03",
       highlights: [
-        "Designed modular backend services with NestJS and clear API boundaries",
+        "Designed modular services with NestJS and clear API boundaries",
         "Built React features that consumed APIs through shared client patterns",
         "Integrated AWS S3 and Google Maps in product flows",
         "Worked with relational databases using TypeORM"
@@ -60,25 +60,27 @@ export const portfolio: Portfolio = {
     },
     {
       company: "Crinfotask LLC",
-      role: "Junior Software Developer",
+      role: "Fullstack Developer",
       location: "Baku, Azerbaijan",
       start: "2019-09",
       end: "2021-10",
       highlights: [
-        "Built decision and scoring services using Python and Django",
-        "Containerized services with Docker for consistent environments",
-        "Worked with Kubernetes and CI/CD to improve delivery flow"
+        "Developed service-oriented applications using Python and Django",
+        "Defined clear API contracts and built SDK-style client patterns for data access",
+        "Standardized request and response handling to keep integrations consistent",
+        "Used Docker and CI/CD pipelines to support repeatable builds and deployments"
       ]
     },
     {
       company: "Kibrit MMC",
-      role: "Junior Frontend Developer",
+      role: "Frontend Developer",
       location: "Baku, Azerbaijan",
       start: "2018-08",
       end: "2019-09",
       highlights: [
-        "Built internal React apps for day-to-day business workflows",
-        "Used Redux and Saga for state management in complex screens",
+        "Built internal web applications using React and shared UI components",
+        "Consumed REST APIs through structured data flows",
+        "Used Redux and Saga to keep state handling predictable",
         "Created responsive UI with TailwindCSS and Bootstrap"
       ]
     }
@@ -102,9 +104,9 @@ export const portfolio: Portfolio = {
     }
   ],
   skills: {
-    primary: ["React", "TypeScript", "Node.js", "SSR / SSG"],
-    secondary: ["Vue.js (2/3)", "NestJS", "REST APIs", "WebSockets", "GraphQL"],
-    tooling: ["Docker", "Kubernetes", "Ansible", "Git", "CI/CD", "Code generation", "CLI tooling"]
+    primary: ["TypeScript", "Node.js", "React", "API integration"],
+    secondary: ["NestJS", "REST APIs", "GraphQL", "WebSockets", "SSR / SSG", "Vue.js (2/3)"],
+    tooling: ["CLI tooling", "Code generation", "Docker", "Kubernetes", "Git", "CI/CD", "Ansible"]
   },
   languages: [
     { name: "Azerbaijani", level: "Native" },
@@ -114,16 +116,17 @@ export const portfolio: Portfolio = {
   projects: [
     {
       name: "Velnora",
-      tagline: "A modular web framework focused on SSR, plugins, and developer tooling.",
+      tagline: "Modular framework for SSR, routing, runtime plugins, and developer tooling.",
       highlights: [
         "Designed a plugin-based architecture for integrating different app types (CSR/SSR/RSC-ready direction).",
-        "Built an SSR pipeline with clear boundaries, strong typing, and focus on DX.",
-        "Worked on routing and runtime integration patterns with a focus on long-term maintainability."
+        "Built typed API client patterns and shared schemas for consistent service integration.",
+        "Built generators and configuration layers that reduce manual setup and keep projects consistent."
       ],
       stack: ["TypeScript", "Node.js", "Vite", "SSR"],
       featured: true,
       links: [
-        { type: "github", label: "GitHub", href: "https://github.com/Velnora/velnora" }
+        { type: "github", label: "GitHub", href: "https://github.com/Velnora/velnora" },
+        { type: "blog", label: "Blog", href: "https://velnora.notion.site" }
         // { label: "Docs", href: "..." },
       ],
       status: "active"
