@@ -96,8 +96,10 @@ export const generateProfileReadme = ({
     ``,
     portfolioUrl ? bullet(`Portfolio: ${portfolioUrl}`) : null,
     email ? bullet(`[Email](mailto:${email})`) : null,
+    links?.website ? bullet(`[Website](${links.website})`) : null,
     links.linkedin ? bullet(`[LinkedIn](${links.linkedin})`) : null,
-    ``
+    links?.github ? bullet(`[GitHub](${links.github})`) : null,
+    links?.blog ? bullet(`[Blog](${links.blog})`) : null
   ].join("\n");
 
   return `${md.trim()}\n`;
