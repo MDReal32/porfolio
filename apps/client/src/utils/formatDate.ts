@@ -17,3 +17,15 @@ export function formatRange(start: string, end: string): string {
   const to = end === "Present" ? "Present" : formatYearMonth(end);
   return `${from} – ${to}`;
 }
+
+export function formatFullDate(value: string): string {
+  // expects "YYYY-MM-DD"
+  const [year, month, day] = value.split("-");
+  const index = Number(month) - 1;
+
+  if (!year || !day || isNaN(index) || !MONTHS[index]) {
+    return value;
+  }
+
+  return `${Number(day)} ${MONTHS[index]} ${year}`;
+}

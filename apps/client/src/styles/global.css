@@ -20,3 +20,64 @@
     background: white !important;
   }
 }
+
+/* ---- Shared print document (resume + CV): Jake/academic style ---- */
+.resume-print {
+  font-family: "Latin Modern Roman", "CMU Serif", Georgia, "Times New Roman", Times, serif;
+  color: #1a1a1a;
+  font-size: 9.5pt;
+  line-height: 1.25;
+}
+
+.resume-print section {
+  margin-top: 7px;
+}
+
+.resume-print .resume-name {
+  font-size: 21pt;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.resume-print .resume-h2 {
+  font-variant-caps: small-caps;
+  letter-spacing: 0.05em;
+  font-size: 11pt;
+  font-weight: 400;
+  border-bottom: 1px solid #1a1a1a;
+  padding-bottom: 1px;
+  margin-bottom: 3px;
+}
+
+.resume-print a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.resume-print .resume-bullets {
+  list-style: disc;
+  margin-top: 2px;
+}
+
+.resume-print .resume-bullets li {
+  margin-left: 1.1rem;
+  padding-left: 0.15rem;
+  line-height: 1.25;
+}
+
+.resume-print .resume-pubs {
+  list-style: decimal;
+  margin-top: 2px;
+}
+
+.resume-print .resume-pubs li {
+  margin-left: 1.2rem;
+  padding-left: 0.15rem;
+  margin-bottom: 3px;
+  line-height: 1.25;
+}
+
+.resume-print .entry {
+  break-inside: avoid;
+}

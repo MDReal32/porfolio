@@ -3,6 +3,7 @@ import type { Portfolio } from "@portfolio/data";
 type Basics = Portfolio["basics"];
 type Skills = NonNullable<Portfolio["skills"]>;
 type Projects = NonNullable<Portfolio["projects"]>;
+type Publication = NonNullable<Portfolio["publications"]>[number];
 
 export interface Contact {
   text: string;
@@ -25,6 +26,7 @@ export function getContacts(basics: Basics): Contact[] {
     links.linkedin ? { text: strip(links.linkedin), href: links.linkedin, label: "LinkedIn" } : null,
     links.github ? { text: strip(links.github), href: links.github, label: "GitHub" } : null,
     links.website ? { text: strip(links.website), href: links.website, label: "Website" } : null,
+    links.orcid ? { text: strip(links.orcid), href: links.orcid, label: "ORCID" } : null,
     links.blog ? { text: strip(links.blog), href: links.blog, label: "Blog" } : null
   ].filter((c): c is Contact => c !== null);
 }
@@ -44,4 +46,16 @@ export function getSkillLines(skills: Skills | undefined): SkillLine[] {
 export function getPrintProjects(projects: Projects): Projects {
   const featured = projects.filter(p => p.featured);
   return featured.length ? featured : projects;
+}
+
+export function pubHref(p: Publication): string | undefined {
+  return p.doi ? `https://doi.org/${p.doi}` : p.url;
+}
+
+// Split the byline around the owner's name so it can be bolded.
+export function splitAuthors(p: Publication): [string, string, string] {
+  if (!p.highlight) return [p.authors, "", ""];
+  const i = p.authors.indexOf(p.highlight);
+  if (i === -1) return [p.authors, "", ""];
+  return [p.authors.slice(0, i), p.highlight, p.authors.slice(i + p.highlight.length)];
 }

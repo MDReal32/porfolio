@@ -2,6 +2,13 @@
 import "../styles/global.css";
 import Nav from "../components/Nav.astro";
 import { ClientRouter } from "astro:transitions";
+
+interface Props {
+  title?: string;
+  noindex?: boolean;
+}
+
+const { title = "Portfolio | Veyis Aliyev", noindex = false } = Astro.props;
 ---
 
 <!doctype html>
@@ -9,7 +16,8 @@ import { ClientRouter } from "astro:transitions";
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Portfolio | Veys Aliyev</title>
+    <title>{title}</title>
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
 
     <ClientRouter />
   </head>

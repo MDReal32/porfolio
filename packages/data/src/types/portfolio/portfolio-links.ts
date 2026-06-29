@@ -3,4 +3,5 @@ export interface PortfolioLinks {
   github?: string;
   website?: string;
   blog?: string;
+  orcid?: string;
 }

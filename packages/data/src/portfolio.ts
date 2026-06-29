@@ -9,11 +9,17 @@ export const portfolio: Portfolio = {
     location: "Baku, Azerbaijan",
     email: "mdrealiyev00@gmail.com",
     phone: "+994103311969",
+    dateOfBirth: "2000-08-03",
+    placeOfBirth: "Baku, Azerbaijan",
+    nationality: "Azerbaijani",
+    gender: "Male",
+    address: "Baku, AZ1000, Azerbaijan",
     links: {
       linkedin: "https://www.linkedin.com/in/mdrealiyev",
       github: "https://github.com/MDReal32",
       website: "https://mdreal.org",
-      blog: "https://velnora.notion.site"
+      blog: "https://velnora.notion.site",
+      orcid: "https://orcid.org/0000-0002-8545-1825"
     }
   },
   summary: {
@@ -150,6 +156,62 @@ export const portfolio: Portfolio = {
         { type: "npm", label: "NPM", href: "https://npm.im/swiftserve" }
       ],
       status: "completed"
+    }
+  ],
+  publications: [
+    {
+      title: "WiFi from Past to Today, Consequences That Can Cause and Measures of Prevention from Them, WiFi Security Protocols",
+      authors:
+        "Firdus, E., Aghababayev, R., Aliyev, V., Mustafayeva, G., Mayilov, R., Sardarova, I., & Bakhshaliyeva, S.",
+      highlight: "Aliyev, V.",
+      venue: "E3S Web of Conferences, Vol. 474, Art. 02004 (ICITE 2023)",
+      year: 2024,
+      doi: "10.1051/e3sconf/202447402004",
+      note: "Scopus-indexed"
+    },
+    {
+      title: "Holographic Discs — Volumetric Media and Quality Data Storage Media",
+      authors: "Firdus, E., Rustamova, D., Aliyev, V., Sharifli, S., Mayilov, R., & Mehdiyeva, A.",
+      highlight: "Aliyev, V.",
+      venue: "Software Engineering Methods in Systems and Network Systems (CoMeSySo 2023), Lecture Notes in Networks and Systems, Vol. 909, Springer",
+      year: 2024,
+      doi: "10.1007/978-3-031-53549-9_8",
+      note: "Scopus-indexed"
+    },
+    {
+      title: "Virtual Reality in Training Impact on Students of Educational Programs in Augmented Reality",
+      authors: "Firdus, E., Rustamova, D. F., Aliyev, V. K., & Talibov, Z. A.",
+      highlight: "Aliyev, V. K.",
+      venue: "Journal of Pharmaceutical Negative Results, Vol. 14, Special Issue 02",
+      year: 2023,
+      url: "https://www.pnrjournal.com/index.php/home/article/view/6536",
+      note: "Scopus Q4"
+    },
+    {
+      title: "Wi-Fi Networks: Cyber Security Monitoring System",
+      authors: "Firdus, E., Rustamova, D. F., Aliyev, V. K., & Atakishi, T. T.",
+      highlight: "Aliyev, V. K.",
+      venue: "Journal of Pharmaceutical Negative Results, Vol. 14, Regular Issue 02",
+      year: 2023,
+      doi: "10.47750/pnr.2023.14.02.130",
+      note: "Scopus Q4"
+    },
+    {
+      title: "Virtual Reality — Today and Tomorrow: Can Augmented Reality Play a Leading Role in Education?",
+      authors: "Firdus, E., Rustamova, D. F., Aliyev, V. K., & Talibov, Z. A.",
+      highlight: "Aliyev, V. K.",
+      venue: "Endless Light in Science (Int. Scientific-Practical Journal), Almaty, Kazakhstan, pp. 193–200",
+      year: 2022,
+      doi: "10.24412/2709-1201-2022-193-200"
+    }
+  ],
+  presentations: [
+    {
+      title: "FLUXORA: Çətin İnkişaf Yollarının Sadə və Asan Həlli",
+      event:
+        'Republican Scientific-Practical Conference of Young Researchers "Global Challenges and Perspectives" (102nd anniversary of Heydar Aliyev)',
+      location: "Western Caspian University, Baku",
+      date: "14 May 2025"
     }
   ]
 };
