@@ -3,7 +3,7 @@ import { resolve } from "node:path";
 
 import { portfolio } from "@portfolio/data";
 
-import { generateProfileReadme } from "../generator/generate-profile-readme";
+import { generateProfileReadme } from "./generator/generate-profile-readme";
 
 const readme = generateProfileReadme({
   portfolio: portfolio,

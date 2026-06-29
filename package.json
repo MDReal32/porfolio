@@ -1,5 +1,5 @@
 {
-  "name": "portfolio",
+  "name": "@mdreal/portfolio",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -8,10 +8,10 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "yarn workspace @portfolio/web build",
-    "dev": "yarn workspace @portfolio/web dev",
+    "build": "yarn workspace @portfolio/client build",
+    "dev": "yarn workspace @portfolio/client dev",
     "generate:profile": "yarn workspace @portfolio/generator generate",
-    "preview": "yarn workspace @portfolio/web preview"
+    "preview": "yarn workspace @portfolio/client preview"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",

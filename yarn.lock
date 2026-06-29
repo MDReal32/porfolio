@@ -852,6 +852,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mdreal/portfolio@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@mdreal/portfolio@workspace:."
+  dependencies:
+    "@trivago/prettier-plugin-sort-imports": "npm:^6.0.2"
+    prettier: "npm:^3.9.3"
+    prettier-plugin-astro: "npm:^0.14.1"
+    prettier-plugin-packagejson: "npm:^3.0.2"
+    prettier-plugin-tailwindcss: "npm:^0.8.0"
+  languageName: unknown
+  linkType: soft
+
 "@napi-rs/wasm-runtime@npm:^1.1.4, @napi-rs/wasm-runtime@npm:^1.1.6":
   version: 1.1.6
   resolution: "@napi-rs/wasm-runtime@npm:1.1.6"
@@ -878,6 +890,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@portfolio/client@workspace:apps/client":
+  version: 0.0.0-use.local
+  resolution: "@portfolio/client@workspace:apps/client"
+  dependencies:
+    "@portfolio/data": "workspace:^"
+    "@tailwindcss/vite": "npm:^4.3.1"
+    astro: "npm:7.0.3"
+    daisyui: "npm:^5.6.5"
+    tailwindcss: "npm:^4.3.1"
+  languageName: unknown
+  linkType: soft
+
 "@portfolio/data@workspace:^, @portfolio/data@workspace:packages/data":
   version: 0.0.0-use.local
   resolution: "@portfolio/data@workspace:packages/data"
@@ -890,18 +914,6 @@ __metadata:
   dependencies:
     "@portfolio/data": "workspace:^"
     vite-node: "npm:^6.0.0"
-  languageName: unknown
-  linkType: soft
-
-"@portfolio/web@workspace:apps/web":
-  version: 0.0.0-use.local
-  resolution: "@portfolio/web@workspace:apps/web"
-  dependencies:
-    "@portfolio/data": "workspace:^"
-    "@tailwindcss/vite": "npm:^4.3.1"
-    astro: "npm:7.0.3"
-    daisyui: "npm:^5.6.5"
-    tailwindcss: "npm:^4.3.1"
   languageName: unknown
   linkType: soft
 
@@ -2792,18 +2804,6 @@ __metadata:
   checksum: 10c0/e2c6023372cc7b5764719a5ffb9da0f8e781212fa7ca4bd0562db929df8e117460f00dff3cb7509dacfc06b86de924b247f504d0ce1806a37fac4633081466b0
   languageName: node
   linkType: hard
-
-"portfolio@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "portfolio@workspace:."
-  dependencies:
-    "@trivago/prettier-plugin-sort-imports": "npm:^6.0.2"
-    prettier: "npm:^3.9.3"
-    prettier-plugin-astro: "npm:^0.14.1"
-    prettier-plugin-packagejson: "npm:^3.0.2"
-    prettier-plugin-tailwindcss: "npm:^0.8.0"
-  languageName: unknown
-  linkType: soft
 
 "postcss@npm:^8.5.15":
   version: 8.5.16

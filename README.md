@@ -46,7 +46,7 @@ Yarn workspaces monorepo:
 
 ```txt
 apps/
-  web/               # Astro site (@portfolio/web)
+  client/            # Astro site (@portfolio/client)
     src/
       components/     # UI components (Nav, Hero, FeaturedProjects)
       layouts/        # Layout wrapper
@@ -55,7 +55,7 @@ apps/
       styles/         # Global + print styles
   generator/         # Profile README generator (@portfolio/generator)
     src/
-      bin/            # generate.ts entrypoint
+      main.ts         # Entrypoint
       generator/      # README rendering logic
 packages/
   data/              # Portfolio content + types (@portfolio/data, shared)
@@ -103,7 +103,7 @@ yarn dev
 yarn build
 ```
 
-Output is generated in `apps/web/build/`.
+Output is generated in `apps/client/build/`.
 
 ---
 

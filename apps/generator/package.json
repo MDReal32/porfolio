@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "generate": "vite-node src/bin/generate.ts"
+    "generate": "vite-node src/main.ts"
   },
   "dependencies": {
     "@portfolio/data": "workspace:^"
