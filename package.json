@@ -10,18 +10,18 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "astro": "^5.16.5"
+    "astro": "7.0.3"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "^4.1.18",
-    "@trivago/prettier-plugin-sort-imports": "^6.0.0",
-    "daisyui": "^5.5.13",
-    "prettier": "^3.7.4",
+    "@tailwindcss/vite": "^4.3.1",
+    "@trivago/prettier-plugin-sort-imports": "^6.0.2",
+    "daisyui": "^5.6.5",
+    "prettier": "^3.9.3",
     "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-packagejson": "^2.5.20",
-    "prettier-plugin-tailwindcss": "^0.7.2",
-    "tailwindcss": "^4.1.18",
-    "vite-node": "^5.2.0"
+    "prettier-plugin-packagejson": "^3.0.2",
+    "prettier-plugin-tailwindcss": "^0.8.0",
+    "tailwindcss": "^4.3.1",
+    "vite-node": "^6.0.0"
   },
-  "packageManager": "yarn@4.12.0"
+  "packageManager": "yarn@4.17.0"
 }
