@@ -1,27 +1,24 @@
 {
   "name": "portfolio",
   "version": "0.0.1",
+  "private": true,
   "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "astro": "astro",
-    "build": "astro build",
-    "dev": "astro dev",
-    "generate:profile": "vite-node src/bin/generate.ts",
-    "preview": "astro preview"
-  },
-  "dependencies": {
-    "astro": "7.0.3"
+    "build": "yarn workspace @portfolio/web build",
+    "dev": "yarn workspace @portfolio/web dev",
+    "generate:profile": "yarn workspace @portfolio/generator generate",
+    "preview": "yarn workspace @portfolio/web preview"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "^4.3.1",
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",
-    "daisyui": "^5.6.5",
     "prettier": "^3.9.3",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-packagejson": "^3.0.2",
-    "prettier-plugin-tailwindcss": "^0.8.0",
-    "tailwindcss": "^4.3.1",
-    "vite-node": "^6.0.0"
+    "prettier-plugin-tailwindcss": "^0.8.0"
   },
   "packageManager": "yarn@4.17.0"
 }

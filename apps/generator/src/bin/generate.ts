@@ -1,7 +1,8 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 
-import { portfolio } from "../data/portfolio";
+import { portfolio } from "@portfolio/data";
+
 import { generateProfileReadme } from "../generator/generate-profile-readme";
 
 const readme = generateProfileReadme({

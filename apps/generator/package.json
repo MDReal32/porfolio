@@ -1,0 +1,14 @@
+{
+  "name": "@portfolio/generator",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "generate": "vite-node src/bin/generate.ts"
+  },
+  "dependencies": {
+    "@portfolio/data": "workspace:^"
+  },
+  "devDependencies": {
+    "vite-node": "^6.0.0"
+  }
+}

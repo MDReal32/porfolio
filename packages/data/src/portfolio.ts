@@ -1,4 +1,4 @@
-import type { Portfolio } from "../types/portfolio/portfolio";
+import type { Portfolio } from "./types/portfolio/portfolio";
 
 export const portfolio: Portfolio = {
   basics: {

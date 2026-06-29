@@ -3,6 +3,5 @@
   "compilerOptions": {
     "allowImportingTsExtensions": false
   },
-  "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist"]
+  "include": ["src/**/*"]
 }

@@ -1,4 +1,4 @@
-import type { Portfolio } from "../types/portfolio/portfolio";
+import type { Portfolio } from "@portfolio/data";
 
 export interface ProfileReadmeGeneratorOptions {
   portfolio: Portfolio;
