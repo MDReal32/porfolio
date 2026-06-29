@@ -11,3 +11,9 @@ export function formatYearMonth(value: string): string {
 
   return `${MONTHS[index]} ${year}`;
 }
+
+export function formatRange(start: string, end: string): string {
+  const from = formatYearMonth(start);
+  const to = end === "Present" ? "Present" : formatYearMonth(end);
+  return `${from} – ${to}`;
+}

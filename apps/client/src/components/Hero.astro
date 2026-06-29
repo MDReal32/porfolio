@@ -5,6 +5,20 @@ const { basics, summary } = portfolio;
 
 <section class="px-6 pt-16 pb-14">
   <div class="mx-auto max-w-2xl">
+    <!-- Avatar -->
+    {
+      basics.avatar && (
+        <img
+          src={basics.avatar}
+          alt={basics.preferredName ?? basics.fullName}
+          width="80"
+          height="80"
+          loading="eager"
+          class="ring-base-300/60 mb-6 h-20 w-20 rounded-full object-cover ring-1"
+        />
+      )
+    }
+
     <!-- Location -->
     <p class="text-xs tracking-wide uppercase opacity-50">
       {basics.location}

@@ -6,6 +6,9 @@ export interface Project {
   tagline: string; // 1-line value
   description?: string;
 
+  start?: string; // "YYYY-MM"
+  end?: string; // "YYYY-MM" or "Present"
+
   highlights?: string[]; // 2–4 bullets: decisions/impact
   stack?: string[]; // keep short
 

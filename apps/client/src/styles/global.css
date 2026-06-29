@@ -6,6 +6,11 @@
 }
 
 @media print {
+  @page {
+    size: A4;
+    margin: 1.1cm 1.27cm;
+  }
+
   :root {
     color-scheme: light;
   }
@@ -13,15 +18,5 @@
   html,
   body {
     background: white !important;
-    color: black !important;
-  }
-
-  * {
-    color: #000 !important;
-    opacity: 1 !important;
-  }
-
-  a {
-    text-decoration: none !important;
   }
 }

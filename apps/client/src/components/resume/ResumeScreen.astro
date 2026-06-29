@@ -1,0 +1,212 @@
+---
+import { portfolio } from "@portfolio/data";
+import { formatRange } from "../../utils/formatDate";
+import { getContacts, getSkillLines } from "../../utils/resume";
+import PrintButton from "../PrintButton.astro";
+
+const { basics, summary, experience = [], projects = [], skills, education = [], languages = [] } = portfolio;
+const contacts = getContacts(basics);
+const skillLines = getSkillLines(skills);
+---
+
+<!-- Branded dark resume (hidden when printing) -->
+<main class="mx-auto max-w-3xl px-6 py-14 print:hidden">
+  <!-- Header -->
+  <header class="flex items-start justify-between gap-5">
+    <div class="flex flex-col gap-5 sm:flex-row sm:items-center">
+      {
+        basics.avatar && (
+          <img
+            src={basics.avatar}
+            alt={basics.fullName}
+            width="80"
+            height="80"
+            class="ring-base-300/60 h-20 w-20 shrink-0 rounded-full object-cover ring-1"
+          />
+        )
+      }
+      <div class="space-y-1">
+        <h1 class="text-3xl font-bold tracking-tight">{basics.fullName}</h1>
+        <p class="text-base-content/70">{basics.title}</p>
+        <p class="text-base-content/45 text-sm">{basics.location}</p>
+      </div>
+    </div>
+
+    <PrintButton />
+  </header>
+
+  <!-- Contact chips -->
+  <div class="mt-6 flex flex-wrap gap-2">
+    {
+      contacts.map(c => (
+        <a
+          href={c.href}
+          target={c.href.startsWith("http") ? "_blank" : undefined}
+          rel={c.href.startsWith("http") ? "noreferrer" : undefined}
+          class="border-base-300/60 text-base-content/70 hover:border-primary/60 hover:text-base-content rounded-full border px-3 py-1 text-xs transition"
+        >
+          {c.label}
+        </a>
+      ))
+    }
+  </div>
+
+  <!-- Summary -->
+  {
+    summary?.lines?.length && (
+      <section class="mt-12">
+        <h2 class="text-base-content/45 flex items-center gap-2 text-xs font-semibold tracking-widest uppercase">
+          <span class="bg-primary/60 h-px w-6" /> Summary
+        </h2>
+        <div class="mt-4 space-y-2">
+          {summary.lines.map(line => (
+            <p class="text-base-content/80 leading-relaxed">{line}</p>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  <!-- Experience -->
+  {
+    experience.length && (
+      <section class="mt-12">
+        <h2 class="text-base-content/45 flex items-center gap-2 text-xs font-semibold tracking-widest uppercase">
+          <span class="bg-primary/60 h-px w-6" /> Experience
+        </h2>
+        <div class="border-base-300/40 mt-6 space-y-8 border-l pl-6">
+          {experience.map(role => (
+            <div class="relative">
+              <span class="bg-primary ring-base-100 absolute top-1.5 -left-[1.72rem] h-2.5 w-2.5 rounded-full ring-4" />
+              <div class="flex flex-wrap items-baseline justify-between gap-x-3">
+                <h3 class="text-base-content font-medium">
+                  {role.role} <span class="text-base-content/50">· {role.company}</span>
+                </h3>
+                <span class="text-base-content/45 text-sm whitespace-nowrap">{formatRange(role.start, role.end)}</span>
+              </div>
+              {role.location && <p class="text-base-content/40 mt-0.5 text-sm">{role.location}</p>}
+              {role.highlights?.length ? (
+                <ul class="text-base-content/70 mt-2 space-y-1.5 text-sm leading-6">
+                  {role.highlights.map(h => (
+                    <li class="flex gap-2">
+                      <span class="bg-base-content/30 mt-2.5 h-1 w-1 shrink-0 rounded-full" />
+                      <span>{h}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
+            </div>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  <!-- Projects -->
+  {
+    projects.length && (
+      <section class="mt-12">
+        <h2 class="text-base-content/45 flex items-center gap-2 text-xs font-semibold tracking-widest uppercase">
+          <span class="bg-primary/60 h-px w-6" /> Projects
+        </h2>
+        <div class="mt-6 grid gap-4 sm:grid-cols-2">
+          {projects.map(p => (
+            <div class="border-base-300/40 bg-base-200/30 hover:border-base-300/80 rounded-xl border p-5 transition">
+              <div class="flex items-baseline justify-between gap-3">
+                <h3 class="text-base-content font-medium">{p.name}</h3>
+                {p.start && (
+                  <span class="text-base-content/40 text-xs whitespace-nowrap">
+                    {formatRange(p.start, p.end ?? "Present")}
+                  </span>
+                )}
+              </div>
+              <p class="text-base-content/65 mt-1.5 text-sm leading-6">{p.tagline}</p>
+              {p.stack?.length ? (
+                <div class="mt-3 flex flex-wrap gap-1.5">
+                  {p.stack.map(s => (
+                    <span class="border-base-300/50 text-base-content/55 rounded border px-2 py-0.5 text-[11px]">{s}</span>
+                  ))}
+                </div>
+              ) : null}
+              {p.links?.length ? (
+                <div class="mt-3 flex flex-wrap gap-3">
+                  {p.links.map(l => (
+                    <a href={l.href} target="_blank" rel="noreferrer" class="text-primary text-xs font-medium hover:underline">
+                      {l.label}
+                    </a>
+                  ))}
+                </div>
+              ) : null}
+            </div>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  <!-- Skills -->
+  {
+    skillLines.length && (
+      <section class="mt-12">
+        <h2 class="text-base-content/45 flex items-center gap-2 text-xs font-semibold tracking-widest uppercase">
+          <span class="bg-primary/60 h-px w-6" /> Skills
+        </h2>
+        <div class="mt-5 space-y-4">
+          {skillLines.map(s => (
+            <div class="flex flex-col gap-2 sm:flex-row sm:items-baseline">
+              <span class="text-base-content/45 w-36 shrink-0 text-xs tracking-wide uppercase">{s.label}</span>
+              <div class="flex flex-wrap gap-1.5">
+                {s.items.map(item => (
+                  <span class="border-base-300/50 text-base-content/70 rounded-full border px-2.5 py-0.5 text-xs">{item}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  <!-- Education -->
+  {
+    education.length && (
+      <section class="mt-12">
+        <h2 class="text-base-content/45 flex items-center gap-2 text-xs font-semibold tracking-widest uppercase">
+          <span class="bg-primary/60 h-px w-6" /> Education
+        </h2>
+        <div class="mt-5 space-y-4">
+          {education.map(e => (
+            <div class="flex flex-wrap items-baseline justify-between gap-x-3">
+              <div>
+                <h3 class="text-base-content font-medium">{e.program}</h3>
+                <p class="text-base-content/55 text-sm">
+                  {e.school}
+                  {e.location ? ` · ${e.location}` : ""}
+                </p>
+              </div>
+              <span class="text-base-content/45 text-sm whitespace-nowrap">{formatRange(e.start, e.end)}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  <!-- Languages -->
+  {
+    languages.length && (
+      <section class="mt-12">
+        <h2 class="text-base-content/45 flex items-center gap-2 text-xs font-semibold tracking-widest uppercase">
+          <span class="bg-primary/60 h-px w-6" /> Languages
+        </h2>
+        <div class="mt-5 flex flex-wrap gap-2">
+          {languages.map(l => (
+            <span class="border-base-300/50 text-base-content/70 rounded-full border px-3 py-1 text-xs">
+              {l.name} <span class="text-base-content/40">· {l.level}</span>
+            </span>
+          ))}
+        </div>
+      </section>
+    )
+  }
+</main>

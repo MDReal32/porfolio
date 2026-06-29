@@ -4,6 +4,7 @@ export const portfolio: Portfolio = {
   basics: {
     fullName: "Veyis Aliyev",
     preferredName: "MDReal",
+    avatar: "https://avatars.githubusercontent.com/u/40066034",
     title: "Software Engineer (Fullstack, APIs, Developer Tooling)",
     location: "Baku, Azerbaijan",
     email: "mdrealiyev00@gmail.com",
@@ -83,7 +84,14 @@ export const portfolio: Portfolio = {
   skills: {
     primary: ["TypeScript", "Node.js", "React", "API integration"],
     secondary: ["NestJS", "REST APIs", "GraphQL", "WebSockets", "SSR / SSG", "Vue.js (2/3)"],
-    tooling: ["CLI tooling", "Code generation", "Docker", "Kubernetes", "Git", "CI/CD", "Ansible"]
+    tooling: ["CLI tooling", "Code generation", "Docker", "Kubernetes", "Git", "CI/CD", "Ansible"],
+    categories: [
+      { label: "Languages", items: ["TypeScript", "JavaScript", "Python"] },
+      { label: "Frameworks", items: ["React", "Vue.js (2/3)", "NestJS", "Express.js", "Django"] },
+      { label: "Developer Tools", items: ["Docker", "Kubernetes", "Git", "GitHub", "Jenkins", "CI/CD", "Ansible"] },
+      { label: "Libraries & UI", items: ["Redux", "TailwindCSS", "Material UI", "React Router", "Storybook"] },
+      { label: "Concepts", items: ["REST APIs", "GraphQL", "WebSockets", "SSR / SSG", "Code generation"] }
+    ]
   },
   languages: [
     { name: "Azerbaijani", level: "Native" },
@@ -93,6 +101,8 @@ export const portfolio: Portfolio = {
   projects: [
     {
       name: "Velnora",
+      start: "2023-12",
+      end: "Present",
       tagline: "Modular framework for SSR, routing, runtime plugins, and developer tooling.",
       highlights: [
         "Designed a plugin-based architecture for integrating different app types (CSR/SSR/RSC-ready direction).",
@@ -110,6 +120,8 @@ export const portfolio: Portfolio = {
     },
     {
       name: "NestJS Telegram Bot Framework",
+      start: "2025-09",
+      end: "Present",
       tagline: "A reusable NestJS module for grammY bots with clean DI and multi-bot support.",
       highlights: [
         "Built dynamic module registration patterns (forRoot/forRootAsync) for flexible configuration.",
