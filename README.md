@@ -42,15 +42,26 @@ The site is intentionally minimal and content-first:
 
 ## Project Structure
 
+Yarn workspaces monorepo:
+
 ```txt
-src/
-  components/        # UI components (Nav, Hero, FeaturedProjects)
-  layouts/           # Layout wrapper
-  pages/             # Routes (/ and /resume)
-  data/              # Portfolio data (single source of truth)
-  utils/             # Small helpers (date formatting, etc.)
-  styles/
-    global.css       # Global + print styles
+apps/
+  client/            # Astro site (@portfolio/client)
+    src/
+      components/     # UI components (Nav, Hero, FeaturedProjects)
+      layouts/        # Layout wrapper
+      pages/          # Routes (/ and /resume)
+      utils/          # Small helpers (date formatting, etc.)
+      styles/         # Global + print styles
+  generator/         # Profile README generator (@portfolio/generator)
+    src/
+      main.ts         # Entrypoint
+      generator/      # README rendering logic
+packages/
+  data/              # Portfolio content + types (@portfolio/data, shared)
+    src/
+      portfolio.ts    # Single source of truth
+      types/          # Portfolio type definitions
 ```
 
 ---
@@ -60,7 +71,7 @@ src/
 All content lives in one place:
 
 ```txt
-src/data/portfolio.ts
+packages/data/src/portfolio.ts
 ```
 
 This includes:
@@ -89,10 +100,10 @@ yarn dev
 ## Build
 
 ```bash
-yarn astro build
+yarn build
 ```
 
-Output is generated in `dist/`.
+Output is generated in `apps/client/build/`.
 
 ---
 

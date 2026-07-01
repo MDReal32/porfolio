@@ -5,9 +5,8 @@ on:
     branches:
       - master
     paths:
-      - public/**
-      - src/**
-      - astro.config.mjs
+      - apps/client/**
+      - packages/data/**
   workflow_dispatch:
 
 permissions:
@@ -36,12 +35,12 @@ jobs:
         run: yarn install --immutable
 
       - name: Build
-        run: yarn astro build
+        run: yarn workspace @portfolio/client build
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: build
+          path: apps/client/build
 
   deploy:
     needs: build
