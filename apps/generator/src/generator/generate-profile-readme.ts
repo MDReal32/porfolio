@@ -83,7 +83,7 @@ export const generateProfileReadme = ({
   }
 
   const md = [
-    `<div style="text-align: center">`,
+    `<div align="center">`,
     ``,
     `# Hello, world! 🌍`,
     ``,
@@ -140,7 +140,7 @@ export const generateProfileReadme = ({
     ``,
     `## 📬 Get in Touch`,
     ``,
-    `<div style="text-align: center">`,
+    `<div align="center">`,
     ``,
     [
       portfolioUrl ? linkBadge("Portfolio", portfolioUrl, { color: "2563EB", logo: "googlechrome" }) : null,
@@ -158,7 +158,7 @@ export const generateProfileReadme = ({
     username ? `---` : null,
     username ? `` : null,
     username
-      ? `<div style="text-align: center">\n\n![GitHub Stats](https://github-readme-stats.vercel.app/api?username=${username}&show_icons=true&theme=tokyonight&hide_border=true&count_private=true)\n![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=compact&theme=tokyonight&hide_border=true)\n\n![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=${username}&theme=tokyonight&hide_border=true)\n\n</div>`
+      ? `<div align="center">\n\n![GitHub Stats](https://github-readme-stats.vercel.app/api?username=${username}&show_icons=true&theme=tokyonight&hide_border=true&count_private=true)\n![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=compact&theme=tokyonight&hide_border=true)\n\n![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=${username}&theme=tokyonight&hide_border=true)\n\n</div>`
       : null
   ]
     .filter(line => line !== null)
