@@ -18,7 +18,8 @@ export interface SkillLine {
 
 const strip = (url: string) => url.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");
 
-export function getContacts(basics: Basics): Contact[] {
+export function getContacts(basics: Basics, options: { academic?: boolean } = {}): Contact[] {
+  const { academic = false } = options;
   const links = basics.links ?? {};
   return [
     basics.phone ? { text: basics.phone, href: `tel:${basics.phone}`, label: "Phone" } : null,
@@ -26,20 +27,13 @@ export function getContacts(basics: Basics): Contact[] {
     links.linkedin ? { text: strip(links.linkedin), href: links.linkedin, label: "LinkedIn" } : null,
     links.github ? { text: strip(links.github), href: links.github, label: "GitHub" } : null,
     links.website ? { text: strip(links.website), href: links.website, label: "Website" } : null,
-    links.orcid ? { text: strip(links.orcid), href: links.orcid, label: "ORCID" } : null,
-    links.blog ? { text: strip(links.blog), href: links.blog, label: "Blog" } : null
+    academic && links.orcid ? { text: strip(links.orcid), href: links.orcid, label: "ORCID" } : null,
+    academic && links.blog ? { text: strip(links.blog), href: links.blog, label: "Blog" } : null
   ].filter((c): c is Contact => c !== null);
 }
 
 export function getSkillLines(skills: Skills | undefined): SkillLine[] {
-  if (skills?.categories?.length) {
-    return skills.categories.map(c => ({ label: c.label, items: c.items }));
-  }
-  return [
-    skills?.primary?.length ? { label: "Core", items: skills.primary } : null,
-    skills?.secondary?.length ? { label: "Frameworks & APIs", items: skills.secondary } : null,
-    skills?.tooling?.length ? { label: "Tooling", items: skills.tooling } : null
-  ].filter((s): s is SkillLine => s !== null);
+  return (skills?.categories ?? []).map(c => ({ label: c.label, items: c.items }));
 }
 
 // Resume PDF shows featured projects only (falls back to all if none flagged)

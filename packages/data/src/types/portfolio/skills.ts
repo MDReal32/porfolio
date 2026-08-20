@@ -4,10 +4,5 @@ export interface SkillCategory {
 }
 
 export interface Skills {
-  primary?: string[];
-  secondary?: string[];
-  tooling?: string[];
-
-  // Resume-oriented breakdown (Languages / Frameworks / Tools …)
-  categories?: SkillCategory[];
+  categories: SkillCategory[];
 }

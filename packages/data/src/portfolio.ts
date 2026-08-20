@@ -40,7 +40,7 @@ export const portfolio: Portfolio = {
     },
     {
       company: "MVP Engine (jetbase.io)",
-      role: "Senior Fullstack developer",
+      role: "Senior Fullstack Developer",
       location: "Krakiv, Ukraine",
       start: "2021-10",
       end: "2022-03",
@@ -72,25 +72,22 @@ export const portfolio: Portfolio = {
   education: [
     {
       school: "Azerbaijan Technical University (AzTU)",
-      program: "Computer Science",
-      location: "Baku, Azerbaijan",
-      start: "2017-09",
-      end: "2021-05",
-      website: "https://aztu.edu.az"
-    },
-    {
-      school: "Azerbaijan Technical University (AzTU)",
       program: "Computer Security",
       location: "Baku, Azerbaijan",
       start: "2021-09",
       end: "2023-05",
       website: "https://aztu.edu.az"
+    },
+    {
+      school: "Azerbaijan Technical University (AzTU)",
+      program: "Computer Science",
+      location: "Baku, Azerbaijan",
+      start: "2017-09",
+      end: "2021-05",
+      website: "https://aztu.edu.az"
     }
   ],
   skills: {
-    primary: ["TypeScript", "Node.js", "React", "API integration"],
-    secondary: ["NestJS", "REST APIs", "GraphQL", "WebSockets", "SSR / SSG", "Vue.js (2/3)"],
-    tooling: ["CLI tooling", "Code generation", "Docker", "Kubernetes", "Git", "CI/CD", "Ansible"],
     categories: [
       { label: "Languages", items: ["TypeScript", "JavaScript", "Python"] },
       { label: "Frameworks", items: ["React", "Vue.js (2/3)", "NestJS", "Express.js", "Django"] },
