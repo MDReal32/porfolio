@@ -1,0 +1,38 @@
+<div
+  id="rp"
+  class="grid grid-rows-[0fr] overflow-hidden px-6 transition-[grid-template-rows] duration-300 ease-out print:hidden"
+>
+  <div class="overflow-hidden">
+    <div
+      id="rp-inner"
+      class="border-base-300/60 mx-auto flex max-w-2xl flex-wrap items-center gap-2 border-b py-4 opacity-0 transition-opacity delay-100 duration-300 ease-out"
+    >
+      <button
+        type="button"
+        data-role="frontend"
+        class="border-base-300/50 text-base-content/70 hover:border-primary/60 hover:text-base-content rounded-full border px-3 py-1 text-xs transition"
+      >
+        Frontend
+      </button>
+      <button
+        type="button"
+        data-role="backend"
+        class="border-base-300/50 text-base-content/70 hover:border-primary/60 hover:text-base-content rounded-full border px-3 py-1 text-xs transition"
+      >
+        Backend
+      </button>
+      <button
+        type="button"
+        data-role="devops"
+        class="border-base-300/50 text-base-content/70 hover:border-primary/60 hover:text-base-content rounded-full border px-3 py-1 text-xs transition"
+      >
+        DevOps
+      </button>
+      <span class="bg-primary text-primary-content border-primary hidden"></span>
+    </div>
+  </div>
+</div>
+
+<script>
+  import "../scripts/panel";
+</script>

@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import AdminPanel from "../components/AdminPanel.astro";
+import Panel from "../components/Panel.astro";
 import Nav from "../components/Nav.astro";
 import { ClientRouter } from "astro:transitions";
 
@@ -24,7 +24,7 @@ const { title = "Portfolio | Veyis Aliyev", noindex = false } = Astro.props;
   </head>
   <body class="bg-base-100 text-base-content min-h-screen antialiased">
     <Nav />
-    <AdminPanel />
+    <Panel />
 
     <slot />
   </body>
