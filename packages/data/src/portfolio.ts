@@ -36,7 +36,8 @@ export const portfolio: Portfolio = {
       end: "Present",
       highlights: [
         "Built large React applications for government e-services with a focus on stability and performance. Standardized UI patterns and shared modules to keep projects consistent. Worked with backend teams to align API contracts and fix integration issues. Used TypeScript to reduce runtime errors and improve maintainability."
-      ]
+      ],
+      roles: ["frontend"]
     },
     {
       company: "MVP Engine (jetbase.io)",
@@ -46,7 +47,8 @@ export const portfolio: Portfolio = {
       end: "2022-03",
       highlights: [
         "Designed modular services with NestJS and clear API boundaries. Built React features that consumed APIs through shared client patterns. Integrated AWS S3 and Google Maps. Worked with relational data using TypeORM."
-      ]
+      ],
+      roles: ["frontend", "backend"]
     },
     {
       company: "Crinfotask LLC",
@@ -56,7 +58,8 @@ export const portfolio: Portfolio = {
       end: "2021-10",
       highlights: [
         "Developed service-oriented applications with Python and Django. Defined clear API contracts and built reusable SDK-style client patterns for data access. Standardized request and response handling to keep integrations consistent. Used containerized environments and CI/CD pipelines to support repeatable builds and deployments."
-      ]
+      ],
+      roles: ["backend", "devops"]
     },
     {
       company: "Kibrit MMC",
@@ -66,7 +69,8 @@ export const portfolio: Portfolio = {
       end: "2019-09",
       highlights: [
         "Built internal web applications using React and shared UI components. Consumed REST APIs through structured data flows. Used Redux and Saga to keep state handling predictable. Created responsive layouts and followed a consistent project structure."
-      ]
+      ],
+      roles: ["frontend"]
     }
   ],
   education: [
@@ -89,11 +93,52 @@ export const portfolio: Portfolio = {
   ],
   skills: {
     categories: [
-      { label: "Languages", items: ["TypeScript", "JavaScript", "Python"] },
-      { label: "Frameworks", items: ["React", "Vue.js (2/3)", "NestJS", "Express.js", "Django"] },
-      { label: "Developer Tools", items: ["Docker", "Kubernetes", "Git", "GitHub", "Jenkins", "CI/CD", "Ansible"] },
-      { label: "Libraries & UI", items: ["Redux", "TailwindCSS", "Material UI", "React Router", "Storybook"] },
-      { label: "Concepts", items: ["REST APIs", "GraphQL", "WebSockets", "SSR / SSG", "Code generation"] }
+      {
+        label: "Languages",
+        items: [{ name: "TypeScript" }, { name: "JavaScript" }, { name: "Python", roles: ["backend"] }]
+      },
+      {
+        label: "Frameworks",
+        items: [
+          { name: "React", roles: ["frontend"] },
+          { name: "Vue.js (2/3)", roles: ["frontend"] },
+          { name: "NestJS", roles: ["backend"] },
+          { name: "Express.js", roles: ["backend"] },
+          { name: "Django", roles: ["backend"] }
+        ]
+      },
+      {
+        label: "Developer Tools",
+        items: [
+          { name: "Docker", roles: ["devops"] },
+          { name: "Kubernetes", roles: ["devops"] },
+          { name: "Git" },
+          { name: "GitHub" },
+          { name: "Jenkins", roles: ["devops"] },
+          { name: "CI/CD", roles: ["devops"] },
+          { name: "Ansible", roles: ["devops"] }
+        ]
+      },
+      {
+        label: "Libraries & UI",
+        items: [
+          { name: "Redux", roles: ["frontend"] },
+          { name: "TailwindCSS", roles: ["frontend"] },
+          { name: "Material UI", roles: ["frontend"] },
+          { name: "React Router", roles: ["frontend"] },
+          { name: "Storybook", roles: ["frontend"] }
+        ]
+      },
+      {
+        label: "Concepts",
+        items: [
+          { name: "REST APIs", roles: ["frontend", "backend"] },
+          { name: "GraphQL", roles: ["frontend", "backend"] },
+          { name: "WebSockets", roles: ["frontend", "backend"] },
+          { name: "SSR / SSG", roles: ["frontend"] },
+          { name: "Code generation", roles: ["backend", "devops"] }
+        ]
+      }
     ]
   },
   languages: [
@@ -119,7 +164,8 @@ export const portfolio: Portfolio = {
         { type: "blog", label: "Blog", href: "https://velnora.notion.site" }
         // { label: "Docs", href: "..." },
       ],
-      status: "active"
+      status: "active",
+      roles: ["frontend", "backend"]
     },
     {
       name: "NestJS Telegram Bot Framework",
@@ -137,7 +183,8 @@ export const portfolio: Portfolio = {
         { type: "github", label: "GitHub", href: "https://github.com/MDReal32/nestjs-tg-bot" },
         { type: "npm", label: "NPM", href: "https://npm.im/@mdreal/nestjs-tg-bot" }
       ],
-      status: "completed"
+      status: "completed",
+      roles: ["backend"]
     },
     {
       name: "Swiftserve",
@@ -152,7 +199,8 @@ export const portfolio: Portfolio = {
         { type: "github", label: "GitHub", href: "https://github.com/MDReal32/swiftserve" },
         { type: "npm", label: "NPM", href: "https://npm.im/swiftserve" }
       ],
-      status: "completed"
+      status: "completed",
+      roles: ["backend", "devops"]
     }
   ],
   publications: [

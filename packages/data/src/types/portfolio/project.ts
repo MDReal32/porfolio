@@ -1,5 +1,6 @@
 import type { ProjectLink } from "./project-link";
 import type { ProjectStatus } from "./project-status";
+import type { Role } from "./role";
 
 export interface Project {
   name: string;
@@ -15,4 +16,5 @@ export interface Project {
   links?: ProjectLink[];
   status: ProjectStatus;
   featured?: boolean; // for homepage ordering
+  roles?: Role[]; // resume filter tags; omit to always show
 }

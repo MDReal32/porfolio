@@ -1,7 +1,7 @@
 ---
 import { portfolio } from "@portfolio/data";
 import { formatRange, formatFullDate } from "../../utils/formatDate";
-import { getContacts, getSkillLines, pubHref, splitAuthors } from "../../utils/resume";
+import { getContacts, getSkillLines, pubHref, rolesAttr, splitAuthors } from "../../utils/resume";
 
 const {
   basics,
@@ -216,7 +216,13 @@ const details = [
         <div class="space-y-0.5">
           {skillLines.map(s => (
             <p class="entry">
-              <span class="font-bold">{s.label}</span>: {s.items.join(", ")}
+              <span class="font-bold">{s.label}</span>:{" "}
+              {s.items.map((item, i) => (
+                <>
+                  {i > 0 && ", "}
+                  <span data-roles={rolesAttr(item.roles)}>{item.name}</span>
+                </>
+              ))}
             </p>
           ))}
         </div>

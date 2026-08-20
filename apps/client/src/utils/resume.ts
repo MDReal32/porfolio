@@ -1,4 +1,4 @@
-import type { Portfolio } from "@portfolio/data";
+import type { Portfolio, Role, SkillItem } from "@portfolio/data";
 
 type Basics = Portfolio["basics"];
 type Skills = NonNullable<Portfolio["skills"]>;
@@ -13,7 +13,12 @@ export interface Contact {
 
 export interface SkillLine {
   label: string;
-  items: string[];
+  items: SkillItem[];
+}
+
+// Space-separated role tags for the client-side role filter's data-roles attribute
+export function rolesAttr(roles?: Role[]): string | undefined {
+  return roles?.length ? roles.join(" ") : undefined;
 }
 
 const strip = (url: string) => url.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");

@@ -1,7 +1,7 @@
 ---
 import { portfolio } from "@portfolio/data";
 import { formatRange, formatFullDate } from "../../utils/formatDate";
-import { getContacts, getSkillLines, pubHref, splitAuthors } from "../../utils/resume";
+import { getContacts, getSkillLines, pubHref, rolesAttr, splitAuthors } from "../../utils/resume";
 import PrintButton from "../PrintButton.astro";
 
 const {
@@ -308,7 +308,12 @@ const details = [
               <span class="text-base-content/45 w-36 shrink-0 text-xs tracking-wide uppercase">{s.label}</span>
               <div class="flex flex-wrap gap-1.5">
                 {s.items.map(item => (
-                  <span class="border-base-300/50 text-base-content/70 rounded-full border px-2.5 py-0.5 text-xs">{item}</span>
+                  <span
+                    data-roles={rolesAttr(item.roles)}
+                    class="border-base-300/50 text-base-content/70 rounded-full border px-2.5 py-0.5 text-xs"
+                  >
+                    {item.name}
+                  </span>
                 ))}
               </div>
             </div>

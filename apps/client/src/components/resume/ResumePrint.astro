@@ -1,7 +1,7 @@
 ---
 import { portfolio } from "@portfolio/data";
 import { formatRange } from "../../utils/formatDate";
-import { getContacts, getSkillLines, getPrintProjects } from "../../utils/resume";
+import { getContacts, getPrintProjects, getSkillLines, rolesAttr } from "../../utils/resume";
 
 const { basics, summary, experience = [], skills, education = [], languages = [] } = portfolio;
 const contacts = getContacts(basics);
@@ -45,7 +45,13 @@ const printProjects = getPrintProjects(portfolio.projects ?? []);
         <div class="space-y-0.5">
           {skillLines.map(s => (
             <p class="entry">
-              <span class="font-bold">{s.label}</span>: {s.items.join(", ")}
+              <span class="font-bold">{s.label}</span>:{" "}
+              {s.items.map((item, i) => (
+                <>
+                  {i > 0 && ", "}
+                  <span data-roles={rolesAttr(item.roles)}>{item.name}</span>
+                </>
+              ))}
             </p>
           ))}
         </div>
@@ -59,7 +65,7 @@ const printProjects = getPrintProjects(portfolio.projects ?? []);
         <h2 class="resume-h2">Work Experience</h2>
         <div class="space-y-2">
           {experience.map(role => (
-            <div class="entry">
+            <div class="entry" data-roles={rolesAttr(role.roles)}>
               <div class="flex items-baseline justify-between gap-4">
                 <span class="font-bold">{role.role}</span>
                 <span class="whitespace-nowrap">{formatRange(role.start, role.end)}</span>
@@ -88,7 +94,7 @@ const printProjects = getPrintProjects(portfolio.projects ?? []);
         <h2 class="resume-h2">Projects</h2>
         <div class="space-y-2">
           {printProjects.map(p => (
-            <div class="entry">
+            <div class="entry" data-roles={rolesAttr(p.roles)}>
               <div class="flex items-baseline justify-between gap-4">
                 <span class="font-bold">{p.name}</span>
                 {p.start && <span class="whitespace-nowrap">{formatRange(p.start, p.end ?? "Present")}</span>}

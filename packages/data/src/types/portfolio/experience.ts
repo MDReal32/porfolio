@@ -1,3 +1,5 @@
+import type { Role } from "./role";
+
 export interface Experience {
   company: string;
   role: string;
@@ -5,4 +7,5 @@ export interface Experience {
   start: string; // e.g. "2022-07"
   end: string; // e.g. "Present" or "2023-05"
   highlights?: string[];
+  roles?: Role[]; // resume/CV filter tags; omit to always show
 }
