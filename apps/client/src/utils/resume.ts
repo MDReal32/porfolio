@@ -17,13 +17,11 @@ export interface SkillLine {
 }
 
 // Space-separated role tags for the client-side role filter's data-roles attribute
-export function rolesAttr(roles?: Role[]): string | undefined {
-  return roles?.length ? roles.join(" ") : undefined;
-}
+export const rolesAttr = (roles?: Role[]): string | undefined => (roles?.length ? roles.join(" ") : undefined);
 
 const strip = (url: string) => url.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");
 
-export function getContacts(basics: Basics, options: { academic?: boolean } = {}): Contact[] {
+export const getContacts = (basics: Basics, options: { academic?: boolean } = {}): Contact[] => {
   const { academic = false } = options;
   const links = basics.links ?? {};
   return [
@@ -35,26 +33,23 @@ export function getContacts(basics: Basics, options: { academic?: boolean } = {}
     academic && links.orcid ? { text: strip(links.orcid), href: links.orcid, label: "ORCID" } : null,
     academic && links.blog ? { text: strip(links.blog), href: links.blog, label: "Blog" } : null
   ].filter((c): c is Contact => c !== null);
-}
+};
 
-export function getSkillLines(skills: Skills | undefined): SkillLine[] {
-  return (skills?.categories ?? []).map(c => ({ label: c.label, items: c.items }));
-}
+export const getSkillLines = (skills: Skills | undefined): SkillLine[] =>
+  (skills?.categories ?? []).map(c => ({ label: c.label, items: c.items }));
 
 // Resume PDF shows featured projects only (falls back to all if none flagged)
-export function getPrintProjects(projects: Projects): Projects {
+export const getPrintProjects = (projects: Projects): Projects => {
   const featured = projects.filter(p => p.featured);
   return featured.length ? featured : projects;
-}
+};
 
-export function pubHref(p: Publication): string | undefined {
-  return p.doi ? `https://doi.org/${p.doi}` : p.url;
-}
+export const pubHref = (p: Publication): string | undefined => (p.doi ? `https://doi.org/${p.doi}` : p.url);
 
 // Split the byline around the owner's name so it can be bolded.
-export function splitAuthors(p: Publication): [string, string, string] {
+export const splitAuthors = (p: Publication): [string, string, string] => {
   if (!p.highlight) return [p.authors, "", ""];
   const i = p.authors.indexOf(p.highlight);
   if (i === -1) return [p.authors, "", ""];
   return [p.authors.slice(0, i), p.highlight, p.authors.slice(i + p.highlight.length)];
-}
+};

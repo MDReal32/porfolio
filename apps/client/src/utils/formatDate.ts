@@ -1,6 +1,6 @@
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-export function formatYearMonth(value: string): string {
+export const formatYearMonth = (value: string): string => {
   // expects "YYYY-MM"
   const [year, month] = value.split("-");
   const index = Number(month) - 1;
@@ -10,15 +10,15 @@ export function formatYearMonth(value: string): string {
   }
 
   return `${MONTHS[index]} ${year}`;
-}
+};
 
-export function formatRange(start: string, end: string): string {
+export const formatRange = (start: string, end: string): string => {
   const from = formatYearMonth(start);
   const to = end === "Present" ? "Present" : formatYearMonth(end);
   return `${from} – ${to}`;
-}
+};
 
-export function formatFullDate(value: string): string {
+export const formatFullDate = (value: string): string => {
   // expects "YYYY-MM-DD"
   const [year, month, day] = value.split("-");
   const index = Number(month) - 1;
@@ -28,4 +28,4 @@ export function formatFullDate(value: string): string {
   }
 
   return `${Number(day)} ${MONTHS[index]} ${year}`;
-}
+};
