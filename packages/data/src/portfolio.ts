@@ -180,8 +180,8 @@ export const portfolio: Portfolio = {
       stack: ["TypeScript", "NestJS", "grammY"],
       featured: true,
       links: [
-        { type: "github", label: "GitHub", href: "https://github.com/MDReal32/nestjs-tg-bot" },
-        { type: "npm", label: "NPM", href: "https://npm.im/@mdreal/nestjs-tg-bot" }
+        { type: "github", label: "GitHub", href: "https://github.com/MDReal32/nestjs-grammy" },
+        { type: "npm", label: "NPM", href: "https://npm.im/@mdreal/nestjs-grammy" }
       ],
       status: "completed",
       roles: ["backend"]
